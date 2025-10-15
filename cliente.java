@@ -27,8 +27,6 @@ public class cliente {
         DatagramPacket datagrama = new DatagramPacket(bufferEntrada, bufferEntrada.length);  //debemos pasar el buffer de entrada y su longitud
         //El servidor va a estar esperando el mensaje del cliente
         socket.receive(datagrama);
-        
-
 
         //Extraer el mensaje
         String mensaje = new String(datagrama.getData(),0, datagrama.getLength()); //ni idea para que es el offset pero sin eso no funciona (no hay que escribir offset, solo escribir 0)
